@@ -1,22 +1,23 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - npm install phantomjs-prebuilt
-
+- npm config set spin false
+- npm install -g bower
+- npm install phantomjs-prebuilt
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: ur1bqX/zkhU0z/Z8LAFa96EPMcQ36tcaqmOKdqmlLFT/zuLALJoYnXj5JdK49/SmRdUvjIOov/QFAtQrvost+84ZHfVoEZuXJg9Y+9rGMpgk0HkLOu+G4eb+zpWcg0dfRPUedHBO56xqXA5TVxS4glgn05TB72X7Qh5S6p+PvI2RArFB6/dkagb8glnaCufusd6v1GHWpV/Mvpl5WcNBzxrYo0+WQI0H1vPWJ/6Uo5Yy8hKJVU7N0y/ieW/H4ioPoTTFznKfCl4wXsTvHVziLHCvmtvCEEh5zHh4Kiw9e7Vf4fJHu36mda6lBKHkbkzFeTfZgAbiMnAjhUS4WTVo8rYW3U0/Fy3pTm2x1Z2VTw4H3jZQz68rs6ayeyK9c2vd4re/2DqvjB/hV1f7jxfMAAu1CqxTvn7Y8aOi4aAuSpsOXottQyA0Pht6eNokPFE7LrqQneKwNfOHXuoYpKl3EZgpJbZpdB4eyMD6AHIjnjVI6yZr5Ud8UMLRn6bnt1s5n5E/JQdHl/g+fMbVqLTyxuqEIevUtzVdFDrDr1mFo2GkSHXFqSqOPAxiz+XdFaJLqdwyyO+rTLfzkFK9ZK1/n5j2KkEVgvlcsY5xJowG0P58H1rXI5kgOK8IALO/mAKnuWaA46jYBcvuw08IEfS4Ec/N9JR2J/mCUQbfQWhSTO4=
+  app: frozen-woodland-74784
+  on:
+    repo: Pragtechnologies/peepchat-ui
