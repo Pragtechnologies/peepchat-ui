@@ -1,0 +1,3 @@
+h2#title Ember
+h4 with fastboot, on heroku
+= outlet
