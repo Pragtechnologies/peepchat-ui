@@ -5,5 +5,11 @@ export default Ember.Route.extend({
     doLogin() {
       alert('login to');
     }
+  },
+  model() {
+    return {
+      email: '',
+      password: ''
+    };
   }
 });
