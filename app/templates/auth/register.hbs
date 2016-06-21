@@ -1,23 +1,7 @@
-{{#x-card
-  onsubmit=attrs.onsubmit
-  title='Register with Peepchat'
-  buttonText='Register'}}
+<div class="container">
   <div class="row">
-    {{x-input
-      classNames='col s12'
-      type='email'
-      label='Username'}}
+    <div class="col s12 m8 offset-m2">
+      {{register-card onsubmit=(route-action 'doRegister')}}
+    </div>
   </div>
-  <div class="row">
-    {{x-input
-      classNames='col s12'
-      type='password'
-      label='Password'}}
-  </div>
-  <div class="row">
-    {{x-input
-      classNames='col s12'
-      type='password'
-      label='Confirm Password'}}
-  </div>
-{{/x-card}}
+</div>
